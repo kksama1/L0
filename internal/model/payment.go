@@ -1,4 +1,4 @@
-package moodel
+package model
 
 type Payment struct {
 	Transaction  string `json:"transaction" validate:"required, unique"`

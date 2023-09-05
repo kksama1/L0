@@ -1,4 +1,4 @@
-package moodel
+package model
 
 type Delivery struct {
 	Name    string `json:"name" validate:"required"`

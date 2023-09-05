@@ -11,7 +11,7 @@ CREATE TABLE orders (
     shardkey VARCHAR NOT NULL,
     sm_id INTEGER UNIQUE NOT NULL,
     date_created TIMESTAMPTZ,
-    off_shard VARCHAR
+    oof_shard VARCHAR
 );
 
 CREATE TABLE delivery (
@@ -50,3 +50,4 @@ CREATE TABLE item (
     brand VARCHAR,
     status INTEGER NOT NULL
 );
+

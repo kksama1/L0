@@ -1,4 +1,4 @@
-package moodel
+package model
 
 type Item struct {
 	ChrtId      int    `json:"chrt_id" validate:"required, unique"`

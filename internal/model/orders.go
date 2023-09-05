@@ -1,4 +1,4 @@
-package moodel
+package model
 
 import "time"
 
@@ -6,17 +6,17 @@ type Orders struct {
 	OrderUid          string    `json:"order_uid" validate:"required, unique"`
 	TrackNumber       string    `json:"track_number" validate:"required"`
 	Entry             string    `json:"entry" validate:"required"`
+	Delivery          Delivery  `json:"delivery" validate:"required"`
+	Payment           Payment   `json:"payment" validate:"required"`
+	Items             []Item    `json:"items" validate:"required"`
 	Locale            string    `json:"locale" validate:"required"`
 	InternalSignature string    `json:"internal_signature"`
 	CustomerId        string    `json:"customer_id" validate:"required, unique"`
 	DeliveryService   string    `json:"delivery_service" validate:"required"`
-	ShardKey          string    `json:"shard_key" validate:"required"`
+	ShardKey          string    `json:"shardkey" validate:"required"`
 	SmId              int       `json:"sm_id" validate:"required, unique"`
 	DateCreated       time.Time `json:"date_created" validate:"required"`
-	OffShard          string    `json:"off_shard" validate:"required"`
-	Delivery          Delivery  `json:"delivery" valida te:"required"`
-	Payment           Payment   `json:"payment" validate:"required"`
-	Items             []Item    `json:"items" validate:"required"`
+	OоfShard          string    `json:"oof_shard" validate:"required"`
 }
 
 /*
